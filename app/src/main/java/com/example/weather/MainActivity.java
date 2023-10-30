@@ -20,27 +20,27 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etCity;
-    private EditText etCountry;
+    private EditText City;
+    private EditText Country;
     private Button btnGet;
-    private TextView tvResult;
+    private TextView Result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etCity = findViewById(R.id.etCity);
-        etCountry = findViewById(R.id.etCountry);
+        City = findViewById(R.id.city);
+        Country = findViewById(R.id.country);
         btnGet = findViewById(R.id.btnGet);
-        tvResult = findViewById(R.id.tvResult);
+        Result = findViewById(R.id.resultText);
 
         btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String city = etCity.getText().toString().trim();
-                String country = etCountry.getText().toString().trim();
-                WeatherDataAdapter weatherDataAdapter = new WeatherDataAdapter(tvResult);
+                String city = City.getText().toString().trim();
+                String country = Country.getText().toString().trim();
+                WeatherDataAdapter weatherDataAdapter = new WeatherDataAdapter(Result);
                 weatherDataAdapter.execute(city, country);
             }
         });

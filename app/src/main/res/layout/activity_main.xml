@@ -38,7 +38,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/etCity"
+            android:id="@+id/city"
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="Enter City Name"
@@ -46,7 +46,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/etCountry"
+            android:id="@+id/country"
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="Enter Country Code (Optional)"
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#0070c7"
+            android:background="@xml/round"
             android:onClick="getWeatherDetails"
             android:text="Get"
             android:textColor="@android:color/white"
@@ -69,7 +69,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvResult" />
+                android:id="@+id/resultText"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
         </ScrollView>
         <View
             android:layout_width="match_parent"
